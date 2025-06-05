@@ -1,0 +1,18 @@
+##
+## Copyright (c) 2025 - OnTarget Labs. All rights reserved.
+##
+
+services:
+
+  ontarget-interview-task:
+    build:
+      dockerfile: Dockerfile
+      target: development
+      context: .
+    volumes:
+      - ./src:/app/src
+    command: make start-dev
+    ports:
+      - "3000:3000"
+    env_file: ".env"
+
