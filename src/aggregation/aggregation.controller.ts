@@ -13,6 +13,7 @@ export class AggregationController {
             return this.aggregationService.getAggregatedData(userId);
     }
 
+    @Get('list/:userId')
     getRequestedPayoutsList(@Param('userId') userId: string): Promise<AggregatedPayoutDTO[]> {
         return this.aggregationService.getRequestedPayoutsList(userId);
     }

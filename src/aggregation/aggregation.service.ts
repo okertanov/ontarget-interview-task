@@ -7,8 +7,8 @@ import { TransactionApiService } from '../transaction-api/transaction-api.servic
 @Injectable()
 export class AggregationService {
     constructor(
-        @Optional() private readonly exchangeRateService: ExchangeRateService,
-        @Optional() private readonly transactionApiService: TransactionApiService,
+        private readonly exchangeRateService: ExchangeRateService,
+        private readonly transactionApiService: TransactionApiService,
     ) {
     }
 

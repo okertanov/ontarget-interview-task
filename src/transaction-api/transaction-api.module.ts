@@ -8,5 +8,6 @@ import { ConfigModule } from '@nestjs/config';
   imports: [ConfigModule, HttpModule],
   controllers: [TransactionApiController],
   providers: [TransactionApiService],
+  exports: [TransactionApiService],
 })
 export class TransactionApiModule {}
